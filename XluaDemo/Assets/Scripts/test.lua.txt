@@ -1,0 +1,22 @@
+function awake()
+	print("awake")
+end
+
+
+function start()
+	print(self.gameObject.name)
+	local audio_com = audio:GetComponent("AudioSource")
+	audio_com:Play()
+	
+end
+
+function update()
+
+	local speed = 120;
+	local degree = speed * CS.UnityEngine.Time.deltaTime
+	self.transform:Rotate(0, degree, 0) 
+end
+
+function ondestroy()
+	--print("ondestroy")
+end
